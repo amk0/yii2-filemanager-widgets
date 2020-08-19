@@ -50,6 +50,11 @@ class FileManagerWidget extends Widget
     public $thumbnailUrlSuffix;
 
     /**
+     * @var string
+     */
+    public $enableThumbnails;
+
+    /**
      * @inheritdoc
      */
     public function init()
@@ -142,6 +147,7 @@ angular.module('FileManagerApp').config(['fileManagerConfigProvider', function (
         enablePermissionsRecursive: false,
         thumbnailUrlPrefix: '{$this->thumbnailUrlPrefix}',
         thumbnailUrlSuffix: '{$this->thumbnailUrlSuffix}',
+        enableThumbnails: {$this->enableThumbnails},
 
         // File patterns
         isEditableFilePattern: /\.(!)/i,
